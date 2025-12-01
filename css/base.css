@@ -10,3 +10,14 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
 }
+
+html, body {
+  overflow-x: hidden; /* Mencegah scroll ke samping paksa */
+  width: 100%;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   1. NAVBAR (NAV)
+   1. NAVBAR (NAV) - FIXED TRANSPARENT
    --------------------------------------------------------- */
 .nav {
   position: fixed;
@@ -7,22 +7,26 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  background-color: transparent; /* Pastikan transparan */
 
-  /* Background Gradient Transparan */
+  /* Gradient bayangan agar tulisan tetap terbaca di atas gambar terang */
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.6) 0%,
     rgba(0, 0, 0, 0) 100%
   );
 
-  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
+
+/* SAYA HAPUS BAGIAN .nav.active DI SINI AGAR TIDAK JADI HITAM PEKAT */
 
 .nav .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 50px 0;
+  padding: 30px 50px 0; /* Padding Asli */
+  transition: padding 0.3s ease;
 }
 
 /* ---------------------------------------------------------
@@ -41,6 +45,7 @@
   text-decoration: none;
   padding: 15px 5px;
   font-weight: 500;
+  font-family: inherit;
   transition: color 0.3s ease-in-out;
 }
 
@@ -62,7 +67,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Efek Hover & Aktif */
 .nav-links > li:not(.dropdown) > a:hover,
 .nav-links > li:not(.dropdown) > a.current {
   color: rgb(254, 183, 253);
@@ -75,22 +79,24 @@
 }
 
 /* ---------------------------------------------------------
-   3. LOGO
+   3. LOGO & HAMBURGER
    --------------------------------------------------------- */
 .logo-navbar img {
   height: 40px;
   transition: height 0.3s ease-in-out;
 }
 
-.nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
+.mobile-menu-btn {
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1002;
+  margin-bottom: 15px;
 }
 
 /* ---------------------------------------------------------
-   4. TOMBOL SEARCH
+   4. SEARCH BOX
    --------------------------------------------------------- */
 .search {
   display: flex;
@@ -103,11 +109,7 @@
   border: 1px solid rgba(255, 255, 255, 0.7);
   overflow: hidden;
   position: relative;
-  transition:
-    width 0.4s ease,
-    box-shadow 0.3s ease,
-    background-color 0.4s ease,
-    border-color 0.4s ease;
+  transition: width 0.4s ease, background-color 0.4s ease;
 }
 
 .search.active {
@@ -115,7 +117,6 @@
   padding-left: 12px;
   background: #fff;
   border-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .search .input {
@@ -142,7 +143,6 @@
   padding: 0 12px 0 0;
   font-size: 16px;
   color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .search.active .btn {
@@ -150,68 +150,67 @@
 }
 
 /* ---------------------------------------------------------
-   5. DROPDOWN MENU
+   5. DROPDOWN
    --------------------------------------------------------- */
-.nav .container,
-.footer-container {
-  max-width: 95%;
-  padding: 0 25px;
-}
-
-.dropdown {
-  position: relative;
-}
-
+.dropdown { position: relative; }
 .nav .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 10px;
-  min-width: 120px;
-  list-style: none;
-  padding: 10px 0;
+  top: 100%; left: 0;
+  margin-top: 10px; min-width: 120px;
+  list-style: none; padding: 10px 0;
   background-color: #333;
   border-radius: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
+.nav .dropdown-menu a { display: block; padding: 10px 20px; }
+.nav .dropdown-menu.show { display: block; }
 
-.nav .dropdown-menu a {
-  display: block;
-  padding: 10px 20px;
-  white-space: nowrap;
-}
+/* ---------------------------------------------------------
+   6. RESPONSIVE (MOBILE)
+   --------------------------------------------------------- */
+@media (max-width: 900px) {
+  .nav .navbar-container {
+    padding: 20px 25px 0;
+  }
 
-.nav .dropdown-menu a:hover {
-  background-color: #444;
-}
+  .mobile-menu-btn {
+    display: block;
+  }
 
-/* Ikon caret (panah kecil) */
-.fa-caret-down {
-  margin-left: 10px;
-  transition: transform 0.2s ease;
-}
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #0f0f0f; /* Background menu HP tetap gelap agar terbaca */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 30px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.8);
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1001;
+  }
 
-/* Tampilkan dropdown */
-.nav .dropdown-menu.show {
-  display: block;
-}
+  .nav-links.nav-active {
+    right: 0;
+  }
 
-/* Animasi panah saat aktif */
-.dropdown.active .dropdown-toggle .fa-caret-down {
-  transform: rotate(180deg);
-}
+  .nav-links > li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-/* Warna teks dropdown aktif & hover */
-.dropdown.active .dropdown-toggle,
-.dropdown .dropdown-toggle:hover {
-  color: rgb(254, 183, 253);
-  font-weight: bold;
+  /* Search di Mobile */
+  .search-wrapper { width: 100%; margin-top: 10px; }
+  .search { width: 100%; border-color: #444; }
+  .search.active { width: 100%; }
+  .search .input { opacity: 1; width: 100%; color: #fff; padding: 0 10px; }
 }
 
 /* ---------------------------------------------------------
-   6. FOOTER
+   7. FOOTER
    --------------------------------------------------------- */
 .site-footer {
   background-color: #0f0f0f;
@@ -222,28 +221,15 @@
 }
 
 .footer-container {
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.social-links {
-  margin-bottom: 20px;
-}
-
+.social-links { margin-bottom: 20px; }
 .social-links a {
-  color: #fff;
-  font-size: 20px;
-  margin: 0 10px;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  color: #fff; font-size: 20px; margin: 0 10px;
+  text-decoration: none; transition: color 0.3s;
 }
-
-.social-links a:hover {
-  color: rgb(254, 183, 253);
-}
-
-.copyright-text {
-  margin: 0;
-  color: #888;
-}
+.social-links a:hover { color: rgb(254, 183, 253); }

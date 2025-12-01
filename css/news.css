@@ -13,7 +13,6 @@ body {
 /* ---------------------------------------------------------
    1. MAIN LAYOUT & SECTION
    --------------------------------------------------------- */
-
 .news-page-content-section {
   background-color: transparent;
   color: #fff;
@@ -21,14 +20,12 @@ body {
   min-height: calc(100vh - 100px);
 }
 
-/* Container (Tetap sama) */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Header Halaman (di dalam content section) */
 .news-page-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -45,7 +42,7 @@ body {
 
 
 /* ---------------------------------------------------------
-   3. NEWS FILTERS (Tetap sama)
+   2. NEWS FILTERS
    --------------------------------------------------------- */
 .news-filters {
   display: flex;
@@ -131,8 +128,9 @@ body {
   color: #fff;
 }
 
+
 /* ---------------------------------------------------------
-   4. NEWS ARTICLES LIST (Tetap sama)
+   3. NEWS ARTICLES LIST
    --------------------------------------------------------- */
 .news-articles-list {
   display: flex;
@@ -192,8 +190,6 @@ body {
 /* Warna tag spesifik */
 .article-tag.events { background-color: #8A2BE2; color: #fff; }
 .article-tag.battle-royale { background-color: #1E90FF; color: #fff; }
-.article-tag.competitive { background-color: #FF4500; color: #fff; }
-.article-tag.collaboration { background-color: #32CD32; color: #fff; }
 .article-tag.update { background-color: #FFA500; color: #000; }
 .article-tag.lego-fortnite-odyssey { background-color: #FFD700; color: #000; }
 .article-tag.fortnite-festival { background-color: #FF69B4; color: #fff; }
@@ -213,60 +209,88 @@ body {
   margin-top: auto;
 }
 
+.news-article-item.hide {
+  display: none;
+}
+
+
 /* ---------------------------------------------------------
-   5. RESPONSIVE (Hapus referensi ke header bg)
+   4. RESPONSIVE (MOBILE)
    --------------------------------------------------------- */
+/* COPY PASTE KE BAGIAN PALING BAWAH NEWS.CSS */
 @media (max-width: 768px) {
+  /* Reset padding container agar pas di layar HP */
+  .container {
+    padding: 0 15px; /* Kiri kanan 15px */
+    width: 100%;
+    overflow: hidden; /* Potong jika ada yang lewat */
+  }
+
   .news-page-main {
-    padding-top: 80px;
+    padding-top: 100px;
+    overflow-x: hidden;
   }
 
-  .news-page-content-section {
-      min-height: calc(100vh - 80px);
-      padding: 40px 0;
-  }
-
-  .news-page-header {
-      margin-bottom: 2rem;
-  }
-
+  /* 1. Header Judul */
   .news-page-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Kecilkan font */
+    word-wrap: break-word; /* Pecah kata jika terlalu panjang */
   }
 
+  /* 2. Filter Button (Agar tidak melebar) */
   .news-filters {
-    flex-direction: column;
-    align-items: stretch;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .filter-categories {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap; /* Jangan turun ke bawah */
+    overflow-x: auto;  /* Scroll samping */
+    padding-bottom: 10px;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Sembunyikan scrollbar tombol filter */
+  .filter-categories::-webkit-scrollbar { display: none; }
+
+  .filter-btn {
+    flex-shrink: 0; /* Tombol tidak tergencet */
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  /* 3. Search Bar */
+  .filter-search {
+    width: 100%; /* Paksa full width */
+    margin-top: 10px;
   }
 
   .filter-search input {
-    min-width: 0;
-    flex-grow: 1;
+    width: 100%;
+    min-width: 0; /* Reset min-width desktop */
+  }
+
+  /* 4. Artikel List (Penyebab utama width jebol) */
+  .news-articles-list {
+    width: 100%;
   }
 
   .news-article-item {
-    flex-direction: column;
+    flex-direction: column; /* Gambar atas, teks bawah */
+    width: 100%; /* Paksa 100% */
+    margin-bottom: 20px;
   }
 
   .article-image {
-    width: 100%;
-    max-height: 200px;
-    height: 200px;
+    width: 100%; /* Reset lebar gambar 300px desktop */
+    height: 200px; /* Tinggi fix biar rapi */
   }
 
   .article-content {
-    padding: 1rem;
+    width: 100%;
+    padding: 15px;
   }
-
-  .article-title {
-    font-size: 1.2rem;
-  }
-}
-
-/* =========================================================
-   6. NEWS FILTERING STYLES (Tetap sama)
-   ========================================================= */
-
-.news-article-item.hide {
-  display: none;
 }

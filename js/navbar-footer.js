@@ -1,8 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  // -------------------------------------------------------
-  // Fungsi untuk memuat komponen HTML (navbar/footer)
-  // -------------------------------------------------------
   const loadComponent = (path, placeholderId) => {
     const placeholder = document.getElementById(placeholderId);
     if (!placeholder) return Promise.resolve();
@@ -14,23 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(html => {
         placeholder.innerHTML = html;
-
-        // Animasi halus saat navbar selesai dimuat
         if (placeholderId === 'navbar-placeholder') {
           const nav = placeholder.querySelector('.nav');
-          if (nav) {
-            setTimeout(() => nav.classList.add('navbar-loaded'), 10);
-          }
+          if (nav) setTimeout(() => nav.classList.add('navbar-loaded'), 10);
         }
-      })
-      .catch(err => {
-        console.error(`Error memuat komponen:`, err);
       });
   };
 
-  // -------------------------------------------------------
-  // Jalankan pemuatan komponen
-  // -------------------------------------------------------
   loadComponent('/navbar.html', 'navbar-placeholder').then(() => {
     runNavbarInit();
   });
@@ -38,10 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent('/footer.html', 'footer-placeholder');
 });
 
-
-// =========================================================
-// Fungsi Utama untuk Inisialisasi Navbar
-// =========================================================
 function runNavbarInit() {
   const nav = document.querySelector('.nav');
   if (!nav) return;
@@ -49,100 +31,86 @@ function runNavbarInit() {
   initNavScroll(nav);
   setActiveLink();
   initSearchToggle();
-  initDropdown(); // <--- FUNGSI BARU DIPANGGIL DI SINI
+  initDropdown();
+  initMobileMenu(); // <--- FUNGSI BARU
 }
 
-
-// =========================================================
-// 1. Efek Scroll Navbar (bayangan muncul saat scroll)
-// =========================================================
 function initNavScroll(nav) {
-  if (nav.dataset.scrollInit) return; // Hindari inisialisasi ganda
+  if (nav.dataset.scrollInit) return;
   nav.dataset.scrollInit = 'true';
-
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.classList.add('active');
-    } else {
-      nav.classList.remove('active');
-    }
+    if (window.scrollY > 50) nav.classList.add('active');
+    else nav.classList.remove('active');
   });
 }
 
-
-// =========================================================
-// 2. Tandai Link Aktif Berdasarkan Halaman Saat Ini
-// =========================================================
 function setActiveLink() {
   const links = document.querySelectorAll('.nav-link, .nav a');
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/index.html';
-
   links.forEach(a => {
-    // Lewati link yang hanya "#"
     if (a.getAttribute('href') === '#') return;
-
     try {
       const url = new URL(a.href, window.location.origin);
       const linkPath = url.pathname.replace(/\/$/, '') || '/index.html';
-
-      const isHome =
-        linkPath === '/index.html' &&
-        (currentPath === '' || currentPath === '/');
-
+      const isHome = linkPath === '/index.html' && (currentPath === '' || currentPath === '/');
       if (linkPath === currentPath || isHome) {
         a.classList.add('current');
-        a.setAttribute('aria-current', 'page');
       } else {
         a.classList.remove('current');
-        a.removeAttribute('aria-current');
       }
-    } catch (e) {
-      // Abaikan error jika href tidak valid
-    }
+    } catch (e) {}
   });
 }
 
-
-// =========================================================
-// 3. Tombol Search Expandable
-// =========================================================
 function initSearchToggle() {
   const search = document.querySelector('.search');
   const btn = document.querySelector('.btn');
   const input = document.querySelector('.input');
-
   if (!search || !btn || !input) return;
-
   btn.addEventListener('click', () => {
     search.classList.toggle('active');
     input.focus();
   });
 }
 
-
-// =========================================================
-// 4. Dropdown Menu
-// =========================================================
 function initDropdown() {
   const dropdown = document.querySelector('.dropdown');
   if (!dropdown) return;
-
   const toggle = dropdown.querySelector('.dropdown-toggle');
   const menu = dropdown.querySelector('.dropdown-menu');
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.classList.toggle('show');
+  });
+  window.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) menu.classList.remove('show');
+  });
+}
 
-  // Klik pada tombol dropdown
-  toggle.addEventListener('click', (event) => {
-    event.preventDefault(); // Hindari berpindah halaman
+// === LOGIKA HAMBURGER MENU (BARU) ===
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  const icon = menuBtn ? menuBtn.querySelector('i') : null;
 
-    dropdown.classList.toggle('active'); // Warna & rotasi panah
-    menu.classList.toggle('show');       // Tampilkan menu
+  if (!menuBtn || !navLinks) return;
+
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    if (navLinks.classList.contains('nav-active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
   });
 
-  // Tutup dropdown jika klik di luar area dropdown
-  window.addEventListener('click', (event) => {
-    if (!dropdown.contains(event.target)) {
-      menu.classList.remove('show');
-      dropdown.classList.remove('active');
-    }
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('nav-active');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
   });
 }

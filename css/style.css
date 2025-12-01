@@ -97,6 +97,10 @@
 }
 
 /* Scrollable News Cards */
+.news-scroll-wrapper {
+  position: relative;
+}
+
 .news-grid {
   display: flex;
   overflow-x: auto;
@@ -104,6 +108,7 @@
   margin-bottom: 3rem;
   padding-bottom: 20px;
 
+  /* Hide Scrollbar */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -133,10 +138,8 @@
 .news-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  position: relative;
-  z-index: 1;
 }
 
 .card-content {
@@ -145,7 +148,7 @@
   left: 0;
   right: 0;
   padding: 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0));
   z-index: 2;
 }
 
@@ -154,8 +157,9 @@
   font-weight: 600;
   color: #dbb3ff;
   text-transform: uppercase;
+  display: block;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(81, 9, 80, 0.95);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card-title {
@@ -188,16 +192,11 @@
 }
 
 /* Tombol Scroll */
-.news-scroll-wrapper {
-  position: relative;
-}
-
 .scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -206,7 +205,6 @@
   height: 45px;
   font-size: 1.2rem;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,11 +217,11 @@
 }
 
 .scroll-btn.prev {
-  left: 10px;
+  left: -20px;
 }
 
 .scroll-btn.next {
-  right: 10px;
+  right: -20px;
 }
 
 .scroll-btn.hidden {
@@ -238,14 +236,12 @@
 .battle-pass-section {
   width: 100%;
   color: #fff;
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 120px 7%;
-
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
     url('/assets/battle-pass.jpg');
   background-size: cover;
   background-position: center;
@@ -303,38 +299,84 @@
 
 
 /* ---------------------------------------------------------
-   4. RESPONSIVE DESIGN
+   4. RESPONSIVE DESIGN (MOBILE)
 --------------------------------------------------------- */
 @media (max-width: 768px) {
+  /* --- A. HERO SECTION --- */
   .hero-section {
     justify-content: center;
     text-align: center;
+    padding: 0 20px;
+    background-position: 65% center;
   }
 
   .hero-content {
     align-items: center;
-    padding: 0 15px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    width: 100%;
   }
 
   .about-game {
     margin-right: 0;
+    font-size: 0.9rem;
   }
 
+  .logo {
+    height: 4rem;
+  }
+
+  /* --- B. NEWS GRID --- */
   .news-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .news-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 15px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .news-card {
+    width: 80vw; /* Card responsif lebar */
+    aspect-ratio: 16/10;
+  }
+
+  .news-card:hover {
+    transform: none;
   }
 
   .card-title {
     font-size: 1.1rem;
   }
 
+  /* Sembunyikan tombol scroll di HP karena pakai jari */
+  .scroll-btn {
+    display: none;
+  }
+
+  /* --- C. BATTLE PASS SECTION --- */
   .battle-pass-section {
     justify-content: center;
     text-align: center;
-    padding: 80px 15px;
+    padding: 60px 20px;
+    background-position: center;
   }
 
   .battle-pass-content {
     align-items: center;
+    width: 100%;
+  }
+
+  .bp-logo {
+    margin-left: 0;
+  }
+
+  .bp-logo-fortnite img {
+    height: 10rem;
+    margin: 0 auto 1rem auto;
   }
 }
