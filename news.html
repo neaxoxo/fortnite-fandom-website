@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+
+  <!-- ===== CSS ===== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/navbar-footer.css">
+  <link rel="stylesheet" href="/css/news.css">
+
+  <!-- ===== Script ===== -->
+  <script src="/js/navbar-footer.js" defer></script>
+  <script src="/js/news.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ===== Main Content ===== -->
+  <main class="news-page-main">
+    <section class="news-page-content-section">
+      <div class="container">
+
+        <!-- ===== Header ===== -->
+        <header class="news-page-header">
+          <h1>News</h1>
+        </header>
+
+        <!-- ===== Filter & Search ===== -->
+        <div class="news-filters">
+          <!-- Filter Kategori -->
+          <div class="filter-categories" id="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="battle-royale">Battle Royale</button>
+            <button class="filter-btn" data-filter="lego-fortnite-odyssey">LEGO Fortnite Odyssey</button>
+            <button class="filter-btn" data-filter="uefn-and-creative">UEFN And Creative</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+            <button class="filter-btn" data-filter="update">Update</button>
+            <button class="filter-btn" data-filter="fortnite-festival">Festival</button>
+          </div>
+
+          <!-- Pencarian -->
+          <div class="filter-search">
+            <input
+              type="text"
+              placeholder="Search Title/Content..."
+              id="search-input"
+            >
+            <button id="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ===== Daftar Artikel ===== -->
+        <div class="news-articles-list" id="news-list">
+
+          <!-- Artikel 1 -->
+          <a
+            href="/article-detail.html?article=fortnitemares-2025"
+            class="news-article-item"
+            data-category="events"
+          >
+            <div class="article-image">
+              <img
+                src="/assets/fortnitemares-2025.jpg"
+                alt="Fortnitemares 2025 Event"
+              >
+            </div>
+            <div class="article-content">
+              <span class="article-tag events">Events</span>
+              <h3 class="article-title">Fortnitemares 2025 Has Begun: The Island Is Cursed!</h3>
+              <span class="article-date">October 09, 2025</span>
+            </div>
+          </a>
+
+          <!-- Artikel 2 -->
+          <a
+            href="/article-detail.html?article=festival-mixtape"
+            class="news-article-item"
+            data-category="fortnite-festival"
+          >
+            <div class="article-image">
+              <img
+                src="/assets/festival-mixtape.jpg"
+                alt="Fortnite Festival Mixtape"
+              >
+            </div>
+            <div class="article-content">
+              <span class="article-tag">Fortnite Festival</span>
+              <h3 class="article-title">The Mixtape Music Pass Brings 10 New Jam Tracks!</h3>
+              <span class="article-date">October 09, 2025</span>
+            </div>
+          </a>
+
+          <!-- Artikel 3 -->
+          <a
+            href="/article-detail.html?article=lego-hero-classes"
+            class="news-article-item"
+            data-category="lego-fortnite-odyssey"
+          >
+            <div class="article-image">
+              <img
+                src="/assets/lego-hero-classes.jpg"
+                alt="LEGO Fortnite Odyssey Hero Classes"
+              >
+            </div>
+            <div class="article-content">
+              <span class="article-tag">LEGO Fortnite Odyssey</span>
+              <h3 class="article-title">Bringing Hero Classes to Odyssey</h3>
+              <span class="article-date">October 03, 2025</span>
+            </div>
+          </a>
+
+          <!-- Artikel 4 -->
+          <a
+            href="/article-detail.html?article=memories-accessed"
+            class="news-article-item"
+            data-category="update"
+          >
+            <div class="article-image">
+              <img
+                src="/assets/memories-accessed.png"
+                alt="//MEMORIES ACCESSED..."
+              >
+            </div>
+            <div class="article-content">
+              <span class="article-tag">Update</span>
+              <h3 class="article-title">//MEMORIES ACCESSED...</h3>
+              <span class="article-date">September 22, 2025</span>
+            </div>
+          </a>
+
+          <!-- Artikel 5 -->
+          <a
+            href="/article-detail.html?article=fortnite-delulu"
+            class="news-article-item"
+            data-category="battle-royale"
+          >
+            <div class="article-image">
+              <img
+                src="/assets/fortnite-delulu.jpg"
+                alt="Fortnite Delulu"
+              >
+            </div>
+            <div class="article-content">
+              <span class="article-tag battle-royale">Battle Royale</span>
+              <h3 class="article-title">Look Out for #1 in Fortnite Delulu</h3>
+              <span class="article-date">September 19, 2025</span>
+            </div>
+          </a>
+
+          <!-- Artikel 6 -->
+          <a
+            href="/article-detail.html?article=uefn-items"
+            class="news-article-item"
+            data-category="uefn-and-creative"
+          >
+            <div class="article-image">
+              <img
+                src="/assets/uefn-items.jpg"
+                alt="UEFN In-Game Items"
+              >
+            </div>
+            <div class="article-content">
+              <span class="article-tag">UEFN and Creative</span>
+              <h3 class="article-title">Fortnite Developers Will Soon Be Able to Sell In-Game Items</h3>
+              <span class="article-date">September 18, 2025</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <div id="footer-placeholder"></div>
+</body>
+</html>

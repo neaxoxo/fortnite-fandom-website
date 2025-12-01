@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fortnite Support Center</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/navbar-footer.css" />
+    <link rel="stylesheet" href="/css/support.css" />
+
+    <!-- Scripts -->
+    <script src="/js/navbar-footer.js" defer></script>
+    <script src="/js/support.js" defer></script>
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="support-main">
+      <!-- Hero Search Section -->
+      <section class="support-hero">
+        <div class="container">
+          <h1 class="support-title">Help Centre</h1>
+          <p class="support-caption">How can we help you?</p>
+
+          <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="faq-search"
+              placeholder="Search for keywords (e.g., V-Bucks, Account, Lag)..."
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Kategori Masalah (Quick Topics) -->
+      <section class="support-categories">
+        <div class="container">
+          <h2>Select a Topic</h2>
+
+          <div class="categories-grid">
+            <div class="cat-card" data-category="account">
+              <i class="fas fa-user-shield"></i>
+              <h3>Account & Security</h3>
+            </div>
+
+            <div class="cat-card" data-category="billing">
+              <i class="fas fa-coins"></i>
+              <h3>Billing & V-Bucks</h3>
+            </div>
+
+            <div class="cat-card" data-category="technical">
+              <i class="fas fa-desktop"></i>
+              <h3>Technical Issues</h3>
+            </div>
+
+            <div class="cat-card" data-category="gameplay">
+              <i class="fas fa-gamepad"></i>
+              <h3>Gameplay & Report</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section (Accordion) -->
+      <section class="support-faq">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-list" id="faq-list">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item" data-category="billing">
+              <button class="faq-question">
+                <span>Where are my V-Bucks?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  V-Bucks purchased on one platform may not be available on
+                  others depending on the platform's policy. Please check your
+                  transaction history to confirm the purchase was successful.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item" data-category="account">
+              <button class="faq-question">
+                <span>How do I enable 2FA?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  To enable Two-Factor Authentication (2FA), go to your Account
+                  page, click on Password & Security, and scroll down to the
+                  Two-Factor Authentication section.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item" data-category="technical">
+              <button class="faq-question">
+                <span>My game keeps crashing on launch</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Please verify your game files through the Epic Games Launcher.
+                  Go to Library, click the three dots next to Fortnite, and
+                  select 'Verify'. Also ensure your graphics drivers are up to
+                  date.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item" data-category="gameplay">
+              <button class="faq-question">
+                <span>How do I report a player?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Open the menu in-game, select 'Reporting/Feedback', then
+                  choose 'Report Player'. Select the player name and the reason
+                  for the report.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item" data-category="billing">
+              <button class="faq-question">
+                <span>Can I get a refund for a skin?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  You can use a Return Ticket to refund eligible items purchased
+                  within the last 30 days. Go to Settings &gt; Account and
+                  Privacy &gt; Return or Cancel Purchase.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pesan jika search tidak ditemukan -->
+          <div id="no-results" class="hidden">
+            <p>No results found for your search.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Support CTA -->
+      <section class="contact-support">
+        <div class="container">
+          <h2>Still need help?</h2>
+          <p>Our support agents are ready to assist you.</p>
+          <button class="contact-btn" id="contact-btn">Contact Us</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Chat Button (Mirip referensi) -->
+    <div class="floating-chat-btn">
+      <i class="fas fa-headset"></i>
+    </div>
+
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

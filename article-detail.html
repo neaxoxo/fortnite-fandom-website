@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite News</title>
+
+  <!-- ===== CSS ===== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/navbar-footer.css">
+  <link rel="stylesheet" href="/css/article-detail.css">
+
+  <!-- ===== Script ===== -->
+  <script src="/js/navbar-footer.js" defer></script>
+  <script src="/js/article-data.js" defer></script>
+  <script src="/js/article-detail.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ===== Main Content ===== -->
+  <main class="article-page-main">
+    <div class="container article-container">
+
+      <!-- Tombol Kembali -->
+      <a href="#" class="back-link" id="back-link">
+        <i class="fas fa-chevron-left"></i> Kembali
+      </a>
+
+      <!-- Layout Artikel -->
+      <div class="article-layout">
+
+        <!-- ===== Artikel Utama ===== -->
+        <article class="article-main">
+          <header class="article-header">
+            <div class="article-meta">
+              <span class="article-date" id="article-date"></span>
+              <span class="article-category" id="article-category"></span>
+            </div>
+            <h1 id="article-title">Loading Article...</h1>
+          </header>
+
+          <!-- Gambar Utama -->
+          <div class="article-featured-image">
+            <img
+              src=""
+              alt="Featured Article Image"
+              id="article-featured-image"
+            >
+          </div>
+
+          <!-- Isi Artikel -->
+          <div class="article-body" id="article-body">
+            <p>Loading content...</p>
+          </div>
+        </article>
+
+        <!-- ===== Sidebar ===== -->
+        <aside class="article-sidebar">
+          <h3>Anda Mungkin Suka</h3>
+
+          <div class="related-articles">
+            <a href="/article-detail.html?article=fortnitemares-2025" class="related-article-item">
+              <img
+                src="/assets/fortnitemares-2025.jpg"
+                alt="Related Article 1"
+              >
+              <h4>Fortnitemares 2025 Has Begun!</h4>
+            </a>
+
+            <a href="/article-detail.html?article=festival-mixtape" class="related-article-item">
+              <img
+                src="/assets/festival-mixtape.jpg"
+                alt="Related Article 2"
+              >
+              <h4>The Mixtape Music Pass Brings 10 New Jam Tracks!</h4>
+            </a>
+
+            <a href="/article-detail.html?article=lego-hero-classes" class="related-article-item">
+              <img
+                src="/assets/lego-hero-classes.jpg"
+                alt="Related Article 3"
+              >
+              <h4>LEGO Fortnite Gets Hero Classes</h4>
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <div id="footer-placeholder"></div>
+</body>
+</html>

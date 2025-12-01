@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battle Pass</title>
+
+  <!-- ===== CSS ===== -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/navbar-footer.css" />
+  <link rel="stylesheet" href="/css/battle-pass.css" />
+
+  <!-- ===== JS ===== -->
+  <script src="/js/battle-pass.js" defer></script>
+  <script src="/js/navbar-footer.js" defer></script>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- =========================================================
+       Hero Section
+  ========================================================= -->
+  <header class="battle-pass-section">
+    <div class="battle-pass-content">
+      <div class="bp-logo">
+        <span class="bp-logo-fortnite">
+          <img src="/assets/battle-royale-logo.webp" alt="fortnite-logo" />
+        </span>
+      </div>
+
+      <p class="bp-subtitle">Ends November 1, 2025 Eastern Time</p>
+      <p class="bp-description">
+        Crush your look, then crush some bugs! Unlock new cosmetics by earning XP in any Fortnite experience.
+      </p>
+
+      <a href="/article-detail.html?article=shock-n-awesome-bugs" class="bp-button">Learn More</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       Main Content
+  ========================================================= -->
+  <main>
+
+    <!-- ===== Outfits Slider Section ===== -->
+    <section class="outfits-slider-section">
+      <div class="outfits-slider-wrapper">
+
+        <header class="outfits-header">
+          <h2>Unlock New Outfits Like Yoo-mi, Agent Patch, and Lt. Ripp Slade</h2>
+          <p>Equip their matching accessories or metamorphize into a mix that screams... you!</p>
+        </header>
+
+        <!-- Outfit Character Slider -->
+        <div class="outfits-char-slider-container" id="outfits-char-slider">
+          <!-- Lt. Ripp Slade -->
+          <div class="outfit-char-slide" data-outfit="ripp-slade">
+            <img src="/assets/lt.-ripp-slade-outfit.webp" alt="Lt. Ripp Slade" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Lt. Ripp Slade</h4>
+              <span>Outfit</span>
+            </div>
+          </div>
+
+          <div class="outfit-char-slide" data-outfit="ripp-slade">
+            <img src="/assets/lt.-ripp-slade-outfit-Nocturnal-Style.webp" alt="Lt. Ripp Slade Nocturnal" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Lt. Ripp Slade</h4>
+              <span>Outfit (Nocturnal Style)</span>
+            </div>
+          </div>
+
+          <!-- Yoo-mi -->
+          <div class="outfit-char-slide" data-outfit="yoo-mi">
+            <img src="/assets/yoo-mi-outfit.webp" alt="Yoo-mi" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Yoo-mi</h4>
+              <span>Outfit</span>
+            </div>
+          </div>
+
+          <div class="outfit-char-slide" data-outfit="yoo-mi">
+            <img src="/assets/yoo-mi-outfit-Tiger's-Eye-Style.webp" alt="Yoo-mi Tiger's Eye" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Yoo-mi</h4>
+              <span>Outfit (Tiger's Eye Style)</span>
+            </div>
+          </div>
+
+          <div class="outfit-char-slide" data-outfit="yoo-mi">
+            <img src="/assets/yoo-mi-outfit-Crimson-Songbird-Style.webp" alt="Yoo-mi Crimson Songbird" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Yoo-mi</h4>
+              <span>Outfit (Crimson Songbird Style)</span>
+            </div>
+          </div>
+
+          <!-- Agent Patch -->
+          <div class="outfit-char-slide" data-outfit="agent-patch">
+            <img src="/assets/agent-patch-outfit.webp" alt="Agent Patch" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Agent Patch</h4>
+              <span>Outfit</span>
+            </div>
+          </div>
+
+          <div class="outfit-char-slide" data-outfit="agent-patch">
+            <img src="/assets/agent-patch-outfit-Extinction-Style.webp" alt="Agent Patch Extinction" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>Agent Patch</h4>
+              <span>Outfit (Extinction Style)</span>
+            </div>
+          </div>
+
+          <!-- UNSC Spartan -->
+          <div class="outfit-char-slide" data-outfit="unsc-spartan">
+            <img src="/assets/unsc-spartan-outfit-blue-armor-style.webp" alt="UNSC Spartan Blue Armor" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>UNSC Spartan</h4>
+              <span>Outfit (Blue Armor Style)</span>
+            </div>
+          </div>
+
+          <div class="outfit-char-slide" data-outfit="unsc-spartan">
+            <img src="/assets/unsc-spartan-outfit-red-armor-style.webp" alt="UNSC Spartan Red Armor" class="outfit-char" />
+            <div class="outfit-caption">
+              <h4>UNSC Spartan</h4>
+              <span>Outfit (Red Armor Style)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background Images -->
+        <div class="outfits-background-container">
+          <div class="outfit-bg-image active" data-outfit="ripp-slade">
+            <img src="/assets/lt.-ripp-slade-bg.webp" alt="" />
+          </div>
+          <div class="outfit-bg-image" data-outfit="yoo-mi">
+            <img src="/assets/yoo-mi-bg.webp" alt="" />
+          </div>
+          <div class="outfit-bg-image" data-outfit="agent-patch">
+            <img src="/assets/agent-patch-bg.webp" alt="" />
+          </div>
+          <div class="outfit-bg-image" data-outfit="unsc-spartan">
+            <img src="/assets/unsc-spartan-bg.webp" alt="" />
+          </div>
+        </div>
+
+        <!-- Slider Buttons -->
+        <button class="slider-btn prev" id="slider-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next" id="slider-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Info Grid Section ===== -->
+    <section class="info-grid-section">
+      <div class="container">
+        <div class="info-block">
+          <div class="info-text">
+            <h2>First in the Battle Pass: Humanity’s First Line of Defense</h2>
+            <p>There’s a flood of bugs out there just waiting to be exterminated! Auto-unlock the UNSC Spartan Outfit after purchasing the Pass.</p>
+            <p>Beginning August 28, non-Battle Pass holders who reach Level 100 will unlock the UNSC Spartan Outfit for free.</p>
+          </div>
+          <div class="info-image">
+            <img src="/assets/info-unsc-spartan.webp" alt="UNSC Spartan Outfit" />
+          </div>
+        </div>
+
+        <div class="info-block info-block--reverse">
+          <div class="info-text">
+            <h2>Bring in a Heavy with Dino Megazord</h2>
+            <p>Battle Pass holders can unlock this Outfit by completing Quests starting September 18!</p>
+          </div>
+          <div class="info-image">
+            <img src="/assets/info-dino-megazord.webp" alt="Dino Megazord" />
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-text">
+            <h2>Get Down to Their Size</h2>
+            <p>All Fortnite-original Outfits in the Shock ‘N Awesome Battle Pass have a LEGO Style for LEGO experiences.</p>
+          </div>
+          <div class="info-image">
+            <img src="/assets/info-lego-styles.webp" alt="LEGO Styles" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== V-Bucks Section ===== -->
+    <section class="vbucks-section">
+      <div class="container">
+        <div class="info-block">
+          <div class="info-image vbucks-image">
+            <img src="/assets/vbucks-reward.webp" alt="V-Bucks Reward" />
+          </div>
+          <div class="info-text vbucks-text">
+            <h2>Unlock up to 1500 V-Bucks</h2>
+            <p>Keep earning XP to unlock up to 1500 V-Bucks. Use them to buy Outfits, Emotes, and more!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How It Works Section ===== -->
+    <section class="how-it-works-section">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p>Purchase the Battle Pass for 1000 V-Bucks and earn rewards as you progress.</p>
+        <p>Some rewards require certain levels and previous unlocks. Earn XP from any Fortnite experience!</p>
+        <p>Battle Pass items may return to the Shop after 18 months, possibly with new styles available for purchase.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

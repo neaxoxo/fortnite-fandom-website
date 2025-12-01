@@ -1,0 +1,340 @@
+/* ---------------------------------------------------------
+   1. HERO SECTION
+--------------------------------------------------------- */
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
+    url('/assets/header.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 7%;
+}
+
+.hero-content {
+  max-width: 500px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  height: 6rem;
+  margin-bottom: 1.3rem;
+  filter: invert(100%);
+}
+
+.about-game {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  line-height: 1.7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #7270ff;
+  border-color: #7270ff;
+  color: #fff;
+}
+
+
+/* ---------------------------------------------------------
+   2. NEWS SECTION
+--------------------------------------------------------- */
+.news-section {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.news-header h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.news-header .subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #aaa;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Scrollable News Cards */
+.news-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  margin-bottom: 3rem;
+  padding-bottom: 20px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.news-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.news-card {
+  flex-shrink: 0;
+  width: 350px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  aspect-ratio: 16 / 9;
+  background-color: #111;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+}
+
+.news-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+  z-index: 2;
+}
+
+.card-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #dbb3ff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(81, 9, 80, 0.95);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Tombol View All */
+.view-all-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Tombol Scroll */
+.news-scroll-wrapper {
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.scroll-btn.prev {
+  left: 10px;
+}
+
+.scroll-btn.next {
+  right: 10px;
+}
+
+.scroll-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   3. BATTLE PASS SECTION
+--------------------------------------------------------- */
+.battle-pass-section {
+  width: 100%;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 7%;
+
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+    url('/assets/battle-pass.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.battle-pass-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bp-logo {
+  margin-left: -4.6rem;
+}
+
+.bp-logo-fortnite img {
+  display: block;
+  height: 15rem;
+  margin-bottom: 1.3rem;
+}
+
+.bp-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.bp-description {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.bp-button {
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.bp-button:hover {
+  background-color: #d54e00;
+  border-color: #d54e00;
+}
+
+
+/* ---------------------------------------------------------
+   4. RESPONSIVE DESIGN
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-section {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .about-game {
+    margin-right: 0;
+  }
+
+  .news-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .battle-pass-section {
+    justify-content: center;
+    text-align: center;
+    padding: 80px 15px;
+  }
+
+  .battle-pass-content {
+    align-items: center;
+  }
+}

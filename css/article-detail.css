@@ -1,0 +1,229 @@
+/* ---------------------------------------------------------
+   1. MAIN LAYOUT & CONTAINER
+   --------------------------------------------------------- */
+.article-page-main {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background-color: #121212;
+  color: #ccc;
+}
+
+.article-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link i {
+  margin-right: 0.5rem;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.5rem;
+}
+
+/* ---------------------------------------------------------
+   2. KOLOM ARTIKEL UTAMA (.article-main)
+   --------------------------------------------------------- */
+.article-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.article-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.article-category {
+  color: #8411ff;
+}
+
+.article-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Gambar Utama */
+.article-featured-image {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.article-featured-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Konten Artikel */
+.article-body p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.article-body h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #444;
+}
+
+.article-body h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #eee;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.article-body ul {
+  list-style: disc;
+  padding-left: 25px;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.article-body li {
+  margin-bottom: 0.8rem;
+}
+
+.article-body a {
+  color: #8411ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-body a:hover {
+  color: #a855f7;
+  text-decoration: underline;
+}
+
+.article-body strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.article-inline-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------------------
+   3. SIDEBAR (.article-sidebar)
+   --------------------------------------------------------- */
+.article-sidebar h3 {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: 1px solid #444;
+}
+
+.related-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.related-article-item {
+  display: flex;
+  gap: 1rem;
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.related-article-item:hover {
+  background-color: #252525;
+}
+
+.related-article-item img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.related-article-item h4 {
+  padding: 10px 10px 10px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #eee;
+}
+
+/* ---------------------------------------------------------
+   4. RESPONSIVE
+   --------------------------------------------------------- */
+@media (max-width: 900px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-sidebar {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-page-main {
+    padding-top: 80px;
+  }
+
+  .article-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .article-body p,
+  .article-body ul {
+    font-size: 1rem;
+  }
+
+  .article-body h2 {
+    font-size: 1.6rem;
+  }
+
+  .article-body h3 {
+    font-size: 1.3rem;
+  }
+}
