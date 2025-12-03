@@ -128,7 +128,6 @@ body {
   color: #fff;
 }
 
-
 /* ---------------------------------------------------------
    3. NEWS ARTICLES LIST
    --------------------------------------------------------- */
@@ -187,7 +186,6 @@ body {
   align-self: flex-start;
 }
 
-/* Warna tag spesifik */
 .article-tag.events { background-color: #8A2BE2; color: #fff; }
 .article-tag.battle-royale { background-color: #1E90FF; color: #fff; }
 .article-tag.update { background-color: #FFA500; color: #000; }
@@ -215,15 +213,14 @@ body {
 
 
 /* ---------------------------------------------------------
-   4. RESPONSIVE (MOBILE)
+   4. RESPONSIVE
    --------------------------------------------------------- */
-/* COPY PASTE KE BAGIAN PALING BAWAH NEWS.CSS */
 @media (max-width: 768px) {
-  /* Reset padding container agar pas di layar HP */
+
   .container {
-    padding: 0 15px; /* Kiri kanan 15px */
+    padding: 0 15px;
     width: 100%;
-    overflow: hidden; /* Potong jika ada yang lewat */
+    overflow: hidden;
   }
 
   .news-page-main {
@@ -231,13 +228,11 @@ body {
     overflow-x: hidden;
   }
 
-  /* 1. Header Judul */
   .news-page-header h1 {
-    font-size: 2rem; /* Kecilkan font */
-    word-wrap: break-word; /* Pecah kata jika terlalu panjang */
+    font-size: 2rem;
+    word-wrap: break-word;
   }
 
-  /* 2. Filter Button (Agar tidak melebar) */
   .news-filters {
     width: 100%;
     padding: 1rem 0;
@@ -246,47 +241,46 @@ body {
   .filter-categories {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap; /* Jangan turun ke bawah */
-    overflow-x: auto;  /* Scroll samping */
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding-bottom: 10px;
     gap: 10px;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Sembunyikan scrollbar tombol filter */
-  .filter-categories::-webkit-scrollbar { display: none; }
+  .filter-categories::-webkit-scrollbar {
+    display: none;
+  }
 
   .filter-btn {
-    flex-shrink: 0; /* Tombol tidak tergencet */
+    flex-shrink: 0;
     font-size: 0.8rem;
     padding: 8px 14px;
   }
 
-  /* 3. Search Bar */
   .filter-search {
-    width: 100%; /* Paksa full width */
+    width: 100%;
     margin-top: 10px;
   }
 
   .filter-search input {
     width: 100%;
-    min-width: 0; /* Reset min-width desktop */
+    min-width: 0;
   }
 
-  /* 4. Artikel List (Penyebab utama width jebol) */
   .news-articles-list {
     width: 100%;
   }
 
   .news-article-item {
-    flex-direction: column; /* Gambar atas, teks bawah */
-    width: 100%; /* Paksa 100% */
+    flex-direction: column;
+    width: 100%;
     margin-bottom: 20px;
   }
 
   .article-image {
-    width: 100%; /* Reset lebar gambar 300px desktop */
-    height: 200px; /* Tinggi fix biar rapi */
+    width: 100%;
+    height: 200px;
   }
 
   .article-content {

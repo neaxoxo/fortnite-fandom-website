@@ -1,16 +1,14 @@
 /* ---------------------------------------------------------
-   1. BATTLE PASS SECTION (HERO)
+   1. BATTLE PASS
    --------------------------------------------------------- */
 .battle-pass-section {
   width: 100%;
   height: 100vh;
   color: #fff;
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 120px 7%;
-
   background-image:
     linear-gradient(
       to right,
@@ -23,7 +21,6 @@
       rgba(0, 0, 0, 0) 20%
     ),
     url('/assets/battle-pass.jpg');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,11 +75,9 @@
   border-color: #d54e00;
 }
 
-
-/* =========================================================
-   2. OUTFITS SLIDER SECTION (REVISED)
-   ========================================================= */
-
+/* ---------------------------------------------------------
+   2. OUTFIT SLIDERS
+   --------------------------------------------------------- */
 .outfits-slider-section {
   background-color: #020202;
   color: #fff;
@@ -177,7 +172,7 @@
   max-height: 70%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
 .outfit-caption {
@@ -240,10 +235,9 @@
   pointer-events: none;
 }
 
-/* =========================================================
-   3. INFO GRID SECTION
-   ========================================================= */
-
+/* ---------------------------------------------------------
+   3. INFO GRID
+   --------------------------------------------------------- */
 .info-grid-section {
   background-color: #121212;
   color: #fff;
@@ -251,7 +245,6 @@
   border-top: 1px solid #333;
 }
 
-/* Container (re-gunakan dari sebelumnya) */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -306,15 +299,14 @@
   height: auto;
 }
 
-/* =========================================================
-   4. V-BUCKS SECTION
-   ========================================================= */
-
+/* ---------------------------------------------------------
+   4. V-BUCKS
+   --------------------------------------------------------- */
 .vbucks-section {
   background: linear-gradient(to right,
-    #121212 0%,    /* Coklat gelap di tengah */
-    #222222 30%,   /* Transisi ke coklat yang lebih gelap */
-    #121212 70%   /* Hitam di bagian tepi luar */
+    #121212 0%,
+    #222222 30%,
+    #121212 70%
   );
   color: #fff;
   padding: 100px 0;
@@ -337,17 +329,15 @@
   margin-left: -4%;
 }
 
-/* =========================================================
-   5. HOW IT WORKS SECTION (KODE BARU DIMULAI)
-   ========================================================= */
-
+/* ---------------------------------------------------------
+   5. HOW IT WORKS
+   --------------------------------------------------------- */
 .how-it-works-section {
-  /* --- PERUBAHAN DI SINI --- */
   background: radial-gradient(
     circle at center,
-    #2e180f 0%,    /* Coklat gelap di tengah */
-    #1c0d02 40%,   /* Transisi ke coklat yang lebih gelap */
-    #121212 100%   /* Hitam di bagian tepi luar */
+    #2e180f 0%,
+    #1c0d02 40%,
+    #121212 100%
   );
   color: #fff;
   padding: 100px 0;
@@ -355,7 +345,6 @@
   text-align: center;
 }
 
-/* Judul (tetap sama) */
 .how-it-works-section h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -363,7 +352,6 @@
   margin-bottom: 2rem;
 }
 
-/* Paragraf (tetap sama) */
 .how-it-works-section p {
   max-width: 800px;
   margin: 0 auto 1.5rem auto;
@@ -373,32 +361,26 @@
   line-height: 1.8;
 }
 
-/* Paragraf terakhir tidak perlu margin bawah */
 .how-it-works-section p:last-of-type {
   margin-bottom: 0;
 }
 
-/* ... (Sisa kode CSS Anda tetap sama) ... */
-
-
-/* =========================================================
-   6. RESPONSIVE (UPDATE UNTUK HOW IT WORKS)
-   ========================================================= */
-/* COPY PASTE KE BAGIAN PALING BAWAH BATTLE-PASS.CSS */
+/* ---------------------------------------------------------
+   6. RESPONSIVE
+   --------------------------------------------------------- */
 @media (max-width: 768px) {
 
-  /* 1. Hero Section (Header) */
   .battle-pass-section {
-    height: auto; /* Jangan paksa 100vh di HP */
+    height: auto;
     min-height: 80vh;
-    padding: 100px 20px 60px 20px; /* Kurangi padding samping */
+    padding: 100px 20px 60px 20px;
     justify-content: center;
     text-align: center;
     background-position: center;
   }
 
   .battle-pass-content {
-    width: 100%; /* Pastikan konten tidak lebar sendiri */
+    width: 100%;
     align-items: center;
   }
 
@@ -410,27 +392,27 @@
     width: 100%;
   }
 
-  /* 2. Slider Section (Penyebab utama scroll samping) */
   .outfits-slider-section {
     width: 100%;
-    overflow: hidden; /* PENTING: Sembunyikan overflow */
+    overflow: hidden;
   }
 
   .outfits-slider-wrapper {
     width: 100%;
-    height: 80vh; /* Sesuaikan tinggi di HP */
+    height: 80vh;
   }
 
   .outfits-header {
-    width: 90%; /* Jangan 100% biar ada margin */
+    width: 90%;
     top: 30px;
   }
 
-  .outfits-header h2 { font-size: 1.5rem; }
+  .outfits-header h2 {
+    font-size: 1.5rem;
+  }
 
-  /* Gambar karakter agar tidak keluar layar */
   .outfit-char {
-    max-width: 90%; /* Batasi lebar karakter */
+    max-width: 90%;
     max-height: 60%;
     bottom: 0;
   }
@@ -441,33 +423,36 @@
     padding: 0 10px;
   }
 
-  /* Tombol Slider */
-  .slider-btn { width: 40px; height: 40px; }
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+
   .slider-btn.prev { left: 10px; }
   .slider-btn.next { right: 10px; }
 
-  /* 3. Info Grid Section */
   .info-grid-section {
     padding: 60px 0;
     overflow: hidden;
   }
 
   .info-block {
-    flex-direction: column !important; /* Paksa turun ke bawah */
+    flex-direction: column !important;
     gap: 30px;
     margin-bottom: 50px;
     text-align: center;
-    padding: 0 15px; /* Tambah padding agar teks tidak nempel pinggir */
+    padding: 0 15px;
   }
 
-  .info-text, .info-image {
-    width: 100%; /* Paksa lebar penuh */
+  .info-text,
+  .info-image {
+    width: 100%;
     flex: none;
   }
 
-  /* 4. V-Bucks & How it Works */
-  .vbucks-section, .how-it-works-section {
-    padding: 60px 20px; /* Pastikan ada padding kiri kanan */
+  .vbucks-section,
+  .how-it-works-section {
+    padding: 60px 20px;
     text-align: center;
   }
 
@@ -477,7 +462,7 @@
   }
 
   .vbucks-image img {
-    margin-left: 0; /* Reset margin negatif desktop */
+    margin-left: 0;
     max-width: 100%;
   }
 }
