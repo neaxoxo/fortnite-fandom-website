@@ -58,25 +58,9 @@ A visually striking homepage featuring a hero section, latest updates, and promo
 
 ---
 
-## 💻 How to Run
-
-Since this project uses no backend or build tools, it is very easy to run:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/Kyneara/Fortnite-Themed-Fandom.git](https://github.com/Kyneara/Fortnite-Themed-Fandom.git)
-    ```
-2.  **Open the project:**
-    Navigate to the project folder and open `index.html` in your browser.
-    *Optional: Use VS Code's "Live Server" extension for the best experience.*
-
----
-
 ## 👤 Author
 
-**Kyneara**
-* Passionate Front-End Developer Student
-* Focus: HTML, CSS, JavaScript, UI/UX Design (Figma)
+**Nea**
 
 ---
 
