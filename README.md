@@ -1,6 +1,7 @@
 # 🎮 Fortnite Themed Compendium / Fan Website
 
-![Project Banner](screencapture-127-0-0-1-3000-index-html-2025-12-01-15_56_59.jpg)
+![Project Banner](<img width="1897" height="903" alt="image" src="https://github.com/user-attachments/assets/8dfa358e-7ff1-45ea-9a33-9574b481ab93" />
+)
 
 > **A high-fidelity, fully responsive fan website dedicated to Fortnite, built entirely with core web technologies.**
 
@@ -31,17 +32,14 @@ By sticking to the fundamentals, I aimed to demonstrate a deep understanding of 
 A visually striking homepage featuring a hero section, latest updates, and promotional content, designed to capture the user's attention immediately.
 
 ### 2. Dynamic News Portal
-*(See `screencapture-127-0-0-1-3000-news-html-2025-12-01-15_59_15.jpg`)*
 * **Category Filtering:** Users can filter news by tags (Battle Royale, Updates, Events) using custom JavaScript logic.
 * **Search Functionality:** Real-time content filtering.
 
 ### 3. Interactive Support Center
-*(See `screencapture-127-0-0-1-3000-support-html-2025-12-01-15_59_26.jpg`)*
 * **Accordion FAQ:** A custom-built collapsible menu system for Frequently Asked Questions.
 * **Topic Selection:** Clean UI for navigating different help categories.
 
 ### 4. Battle Pass Showcase
-*(See `screencapture-127-0-0-1-3000-battle-pass-html-2025-12-01-15_59_01.jpg`)*
 * A long-scrolling, visual-heavy page detailing in-game cosmetics and rewards.
 
 ---
@@ -50,11 +48,12 @@ A visually striking homepage featuring a hero section, latest updates, and promo
 
 | News Page | Support Page |
 |:---:|:---:|
-| <img src="screencapture-127-0-0-1-3000-news-html-2025-12-01-15_59_15.jpg" width="400"> | <img src="screencapture-127-0-0-1-3000-support-html-2025-12-01-15_59_26.jpg" width="400"> |
+| <img width="1920" height="2265" alt="screencapture-fortnite-themed-fandom-vercel-app-news-html-2026-03-11-15_08_37" src="https://github.com/user-attachments/assets/0b99b3d6-a6e2-4e79-977e-a73651e8eafb" /> | <img width="1920" height="2977" alt="screencapture-fortnite-themed-fandom-vercel-app-support-html-2026-03-11-15_10_11" src="https://github.com/user-attachments/assets/f7825142-c39b-4e98-9f8c-274a616a2b59" />
+
 
 | Battle Pass |
 |:---:|
-| <img src="screencapture-127-0-0-1-3000-battle-pass-html-2025-12-01-15_59_01.jpg" width="800"> |
+| <img width="1920" height="5265" alt="screencapture-fortnite-themed-fandom-vercel-app-battle-pass-html-2026-03-11-15_10_56" src="https://github.com/user-attachments/assets/266fbead-c525-4576-a4ea-2ef6a22f8876" /> |
 
 ---
 
