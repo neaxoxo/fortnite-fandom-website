@@ -1,6 +1,6 @@
-# 🎮 Fortnite Themed Compendium / Fan Website
+# 🎮 Fortnite Themed Fan Website
 
-![Project Banner]<img width="1897" height="903" alt="image" src="https://github.com/user-attachments/assets/8dfa358e-7ff1-45ea-9a33-9574b481ab93" />
+<img width="1897" height="903" alt="image" src="https://github.com/user-attachments/assets/8dfa358e-7ff1-45ea-9a33-9574b481ab93" />
 
 > **A high-fidelity, fully responsive fan website dedicated to Fortnite, built entirely with core web technologies.**
 
